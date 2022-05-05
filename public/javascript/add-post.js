@@ -15,7 +15,7 @@ async function newFormHandler(event) {
     }
   });
 
-// if there is a response then replace the homepage with the dashboard page
+  // if there is a response then replace the homepage with the dashboard page
   if (response.ok) {
     document.location.replace("/dashboard");
   } else {
