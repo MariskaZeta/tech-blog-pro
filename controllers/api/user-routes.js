@@ -5,7 +5,7 @@ const {
   Comment,
   Vote
 } = require("../../models");
-const withAuth = require("../utils/auth");
+const withAuth = require("../../utils/auth");
 
 // this route is to GET all users
 router.get("/", (req, res) => {
