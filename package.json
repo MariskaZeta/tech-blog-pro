@@ -1,0 +1,29 @@
+{
+  "name": "tech-blog-pro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MariskaZeta/tech-blog-pro.git"
+  },
+  "author": "Madison Kendall",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MariskaZeta/tech-blog-pro/issues"
+  },
+  "homepage": "https://github.com/MariskaZeta/tech-blog-pro#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "connect-session-sequelize": "^7.1.3",
+    "dotenv": "^16.0.0",
+    "express-handlebars": "^6.0.5",
+    "express-session": "^1.17.2",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.19.0"
+  }
+}
