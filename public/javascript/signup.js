@@ -1,14 +1,14 @@
-// this function is for users logging in
-async function loginFormHandler(event) {
+// this function is for the signup
+async function signupFormHandler(event) {
   event.preventDefault();
 
   // capture the username and password
-  const username = document.querySelector("#username-login").value.trim();
+  const username = document.querySelector("#username-signup").value.trim();
   const password = document.querySelector("#password-login").value.trim();
 
-  // checking to make sure both the username and passwords were entered
+  // check to make sure both username and password are entered
   if (username && password) {
-    const response = await fetch("/api/users/login", {
+    const response = await fetch("/api/users", {
       method: "post",
       body: JSON.stringify({
         username,
@@ -19,7 +19,7 @@ async function loginFormHandler(event) {
       }
     });
 
-    // if response is ok, then load dashboard
+    // if the response is ok, then load dashboard
     if (response.ok) {
       document.location.replace("/dashboard");
     } else {
@@ -28,5 +28,5 @@ async function loginFormHandler(event) {
   }
 }
 
-// event listener for users logging in
-document.querySelector(".login-form").addEventListener("submit", loginFormHandler);
+// event listener for submission of signup
+document.querySelector(".signup-form").addEventListener("submit", signupFormHandler);
