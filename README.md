@@ -4,6 +4,9 @@
 This application is a website used for tech bloggers to write and read about technical concepts, recent advancements, and new technologies. Users will be able to publish their own blog posts and comment on other developers' posts as well.
 * This project follows the MVC paradigm in its architectural structure.
 
+## Application Link
+Here is the link to the application deployment: 
+
 ## Table of Contents
 
 - [Github](#github)
