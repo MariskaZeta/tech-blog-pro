@@ -134,4 +134,45 @@ router.post("/logout", (req, res) => {
   }
 });
 
+// this route is to update (PUT) a user by id
+router.put("/:id", withAuth, (req, res) => {
+  User.update(req.body, {
+    individualHooks: true,
+    where: {
+      id: req.params.id
+    }
+  })
+  .then(dbUserData => {
+    if (!dbUserData[0]) {
+      res.status(404).json({ message: "No user found with this id!" });
+      return;
+    }
+    res.json(dbUserData);
+  })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
+});
+
+// this route is to DELETE a user by id
+router.delete(":/id", withAuth, (req, res) => {
+  User.destroy({
+    where: {
+      id: req.params.id
+    }
+  })
+  .then(dbUserData => {
+    if (!dbUserdata) {
+      res.status(404).json({ message: "No user found with this id!" });
+      return;
+    }
+    res.json(dbUserData);
+  })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
+});
+
 module.exports = router;
