@@ -30,4 +30,4 @@ async function editFormHandler(event) {
 }
 
 // event listener for the edit post submission
-document.querySelector(".edit-post-form").addEventListener("sumbit", editFormHandler);
+document.querySelector(".edit-post-form").addEventListener("submit", editFormHandler);
