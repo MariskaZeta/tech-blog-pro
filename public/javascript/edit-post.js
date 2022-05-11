@@ -4,7 +4,7 @@ async function editFormHandler(event) {
 
   // capture the title, content, and id from the post being edit
   const title = document.querySelector('input[name="post-title"]').value;
-  const post_content = document.querySelector('textarea[name="post_content"]').value().trim();
+  const post_content = document.querySelector('textarea[name="post-content"]').value().trim();
   const post_id = window.location.toString().split("/")[
     window.location.toString().split("/").length - 1
   ];
