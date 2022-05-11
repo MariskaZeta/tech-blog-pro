@@ -5,7 +5,7 @@ const {
   User,
   Comment
 } = require("../models");
-const withAuth = require("../utils/auth");
+const withAuth = require('../utils/auth');
 
 // this route will GET all posts for the dashboard
 router.get("/", withAuth, (req, res) => {

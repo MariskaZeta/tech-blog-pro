@@ -8,12 +8,14 @@ const helpers = require("./utils/helpers");
 
 // Express.js session and connect it to our sequelize database
 const sess = {
-  secret: "Super secret secret",
+  secret: process.env.DB_SECRET,
   cookie: {},
   resave: false,
   saveUnitialized: true,
   store: new SequelizeStore({
-    db: sequelize
+    db: sequelize,
+    checkExpirationInterval: 1000 * 60 * 10, // will check every 10 minutes
+    expiration: 1000 * 60 * 30 // will expire after 30 minutes
   })
 };
 

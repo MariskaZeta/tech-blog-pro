@@ -3,9 +3,7 @@ const {
   User,
   Post,
   Comment,
-  Vote
 } = require("../../models");
-const withAuth = require("../../utils/auth");
 
 // this route is to GET all users
 router.get("/", (req, res) => {
@@ -139,7 +137,7 @@ router.post("/logout", (req, res) => {
 });
 
 // this route is to update (PUT) a user by id
-router.put("/:id", withAuth, (req, res) => {
+router.put("/:id", (req, res) => {
   User.update(req.body, {
       individualHooks: true,
       where: {
@@ -162,7 +160,7 @@ router.put("/:id", withAuth, (req, res) => {
 });
 
 // this route is to DELETE a user by id
-router.delete(":/id", withAuth, (req, res) => {
+router.delete(":/id", (req, res) => {
   User.destroy({
       where: {
         id: req.params.id
