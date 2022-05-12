@@ -11,13 +11,13 @@ const hbs = exphbs.create({ helpers });
 // Express.js session and connect it to our sequelize database
 const sess = {
   secret: process.env.DB_SECRET,
-  cookie: {},
+  cookie: {
+    expires: 60 * 1000 * 10
+  },
   resave: false,
   saveUnitialized: true,
   store: new SequelizeStore({
     db: sequelize,
-    checkExpirationInterval: 1000 * 60 * 10, // will check every 10 minutes
-    expiration: 1000 * 60 * 30 // will expire after 30 minutes
   })
 };
 
@@ -35,6 +35,8 @@ app.use(express.static(path.join(__dirname, "public")));
 // turn on routes
 app.use(routes);
 // turn on connection to db and server
-sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('App now listening on PORT 3001!'));
+sequelize.sync();
+
+app.listen(PORT, () => {
+  console.log(`App listening on port ${PORT}!`);
 });

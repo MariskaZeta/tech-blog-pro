@@ -14,6 +14,7 @@ Here is the link to the application deployment:
 - [Usage](#usage)
 - [Instructions](#instructions)
 - [Technologies](#technologies)
+- [Video](#video)
 - [Screenshots](#screenshots)
 
 ## Github
@@ -52,6 +53,8 @@ DB_PW='your password'
 3. Run npm install in your terminal
 4. Run npm run seeds
 5. Run node server.js to start the application at localhost:3001
+
+## Video
 
 ## Screenshots
 
