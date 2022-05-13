@@ -61,6 +61,9 @@ DB_PW='your password'
 Here is the link to a video demonstration: https://drive.google.com/file/d/1qnkCbX0sVIvy_G3yGiajBn-w781tmm6_/view
 
 ## Screenshots
+<img width="1727" alt="Tech-Blog-Pro-Screenshot1" src="https://user-images.githubusercontent.com/102756451/168332493-7d8e32f3-48c6-47fd-b157-359343e05164.png">
+
+<img width="1728" alt="Tech-Blog-Pro-Screenshot2" src="https://user-images.githubusercontent.com/102756451/168332509-2714ff2a-4159-436b-afa4-66d6434228a3.png">
 
 ## Author
 Madison Kendall
