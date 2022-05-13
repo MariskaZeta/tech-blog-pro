@@ -8,12 +8,9 @@ const helpers = require("./utils/helpers");
 const exphbs = require('express-handlebars');
 const hbs = exphbs.create({ helpers });
 
-const app = express();
-const PORT = process.env.PORT || 3001;
-
 // Express.js session and connect it to our sequelize database
 const sess = {
-  secret: process.env.DB_SECRET,
+  secret: "secret secret",
   cookie: {
     expires: 60 * 1000 * 10
   },
@@ -23,6 +20,9 @@ const sess = {
     db: sequelize,
   })
 };
+
+const app = express();
+const PORT = process.env.PORT || 3001;
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
@@ -35,8 +35,6 @@ app.use(express.static(path.join(__dirname, "public")));
 // turn on routes
 app.use(routes);
 // turn on connection to db and server
-sequelize.sync();
-
-app.listen(PORT, () => {
-    console.log(`App listening on port ${PORT}!`);
+sequelize.sync({ force: false }).then(() => {
+  app.listen(PORT, () => console.log('Now listening'));
 });
