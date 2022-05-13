@@ -23,9 +23,6 @@ Here is the link to the GitHub project page URL: https://github.com/MariskaZeta/
 
 Here is the link to clone for the GitHub repository: https://github.com/MariskaZeta/tech-blog-pro.git
 
-# Video
-Here is the link to the video demonstration:
-
 ## Installation
 The user should git clone the repository from GitHub. This application requires Node.js, and mysql2. To begin the application run `node server.js`.
 * More detailed installation instructions under [Instructions](#instructions)
