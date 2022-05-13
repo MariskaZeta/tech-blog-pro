@@ -19,7 +19,7 @@ Here is the link to the application deployment: https://tech-blog-pro-mvc.heroku
 - [Screenshots](#screenshots)
 
 ## Github
-Here is the link to the GitHub URL:
+Here is the link to the GitHub project page URL: https://github.com/MariskaZeta/tech-blog-pro
 
 Here is the link to clone for the GitHub repository: https://github.com/MariskaZeta/tech-blog-pro.git
 
