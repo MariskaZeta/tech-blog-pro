@@ -5,7 +5,7 @@
 * This project follows the MVC paradigm in its architectural structure.
 
 ## Application Link
-Here is the link to the application deployment:
+Here is the link to the application deployment: https://tech-blog-pro-mvc.herokuapp.com/
 
 ## Table of Contents
 
