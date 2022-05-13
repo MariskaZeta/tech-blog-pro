@@ -58,6 +58,7 @@ DB_PW='your password'
 5. Run node server.js to start the application at localhost:3001
 
 ## Video
+Here is the link to a video demonstration: https://drive.google.com/file/d/1qnkCbX0sVIvy_G3yGiajBn-w781tmm6_/view
 
 ## Screenshots
 
